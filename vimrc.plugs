@@ -52,7 +52,7 @@
         endif
     " }
 
-" Bundles {
+" Plugs {
 
     " Deps {
         "Plug 'gmarik/vundle'
