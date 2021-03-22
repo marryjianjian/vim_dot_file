@@ -263,7 +263,7 @@
     autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 
     " Workaround vim-commentary for Haskell
-    autocmd FileType haskell setlocal commentstring=--\ %s
+    "autocmd FileType haskell setlocal commentstring=--\ %s
     " Workaround broken colour highlighting in Haskell
     autocmd FileType haskell,rust setlocal nospell
 
@@ -522,7 +522,7 @@
 
     " OmniComplete {
         " To disable omni complete, add the following to your .vimrc.before.local file:
-        "   let g:spf13_no_omni_complete = 1
+        let g:spf13_no_omni_complete = 1
         if !exists('g:spf13_no_omni_complete')
             if has("autocmd") && exists("+omnifunc")
                 autocmd Filetype *
@@ -552,7 +552,7 @@
     " }
 
     " Ctags {
-        if isdirectory(expand("~/.vim/bundle/vim-gutentags"))
+        if isdirectory(expand("~/.vim/plugged/vim-gutentags"))
             " gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
             let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
 
@@ -644,8 +644,8 @@
     " }
 
     " JSON {
-        nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
-        let g:vim_json_syntax_conceal = 0
+        "nmap <leader>jt <Esc>:%!python -m json.tool<CR><Esc>:set filetype=json<CR>
+        "let g:vim_json_syntax_conceal = 0
     " }
 
     " PyMode {
@@ -994,7 +994,7 @@
     " }
     " Normal Vim omni-completion {
     " To disable omni complete, add the following to your .vimrc.before.local file:
-    "   let g:spf13_no_omni_complete = 1
+        let g:spf13_no_omni_complete = 1
         elseif !exists('g:spf13_no_omni_complete')
             " Enable omni-completion.
             autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
