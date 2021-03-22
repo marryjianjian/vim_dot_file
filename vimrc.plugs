@@ -8,14 +8,14 @@
 "        |___/ .__/|_| |_|____/        \_/  |_|_| |_| |_|
 "            |_|
 "
-"   This is the personal .vimrc.bundles file of Steve Francia.
+"   This is the personal .vimrc.plugs file modified from Steve Francia.
 "   While much of it is beneficial for general use, I would
 "   recommend picking out the parts you want and understand.
 "
 "   This file imports the various plugins of spf13. If you
 "   wish to alter which groups are imported, see vimrc.before.
-"   If you wish to add or remove individual bundles, create
-"   ~/.vimrc.bundles.local and `Bundle` or `UnBundle` as needed
+"   If you wish to add or remove individual plugs, create
+"   ~/.vimrc.plugs.local and `Plug` as needed
 "   from there.
 "
 "   You can find me at http://spf13.com
@@ -76,10 +76,10 @@
     endif
 
     let g:spf13_no_views = 1
-    " To override all the included bundles, add the following to your
-    " .vimrc.bundles.local file:
-    "   let g:override_spf13_bundles = 1
-    if !exists("g:override_spf13_bundles")
+    " To override all the included plugs, add the following to your
+    " .vimrc.plugs.local file:
+    "   let g:override_spf13_plugs = 1
+    if !exists("g:override_spf13_plugs")
 
     " General {
         if count(g:spf13_bundle_groups, 'general')
