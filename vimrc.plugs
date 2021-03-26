@@ -88,7 +88,7 @@
             Plug 'spf13/vim-colors'
             "Plug 'tpope/vim-surround'
             "Plug 'tpope/vim-repeat'
-            "Plug 'rhysd/conflict-marker.vim'
+            Plug 'rhysd/conflict-marker.vim'
             "Plug 'jiangmiao/auto-pairs'
             Plug 'ctrlpvim/ctrlp.vim'
             Plug 'tacahiroy/ctrlp-funky'
