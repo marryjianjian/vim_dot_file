@@ -584,6 +584,34 @@
         "endif
     " }
 
+    " Coc {
+        if isdirectory(expand("~/.vim/plugged/coc.nvim"))
+            nmap <silent> <C-j> <Plug>(coc-definition)
+            nmap <silent> <C-,> <Plug>(coc-references)
+            set updatetime=300
+            au CursorHold * sil call CocActionAsync('highlight')
+            au CursorHoldI * sil call CocActionAsync('showSignatureHelp')
+        endif
+        " :CocConfig
+        "{
+          ""languageserver": {
+            ""ccls": {
+              ""command": "ccls",
+              ""filetypes": ["c", "cpp", "cuda", "objc", "objcpp"],
+              ""rootPatterns": [".ccls-root", "compile_commands.json"],
+              ""initializationOptions": {
+                ""cache": {
+                  ""directory": ".ccls-cache"
+                "},
+                ""client": {
+                  ""snippetSupport": true
+                "}
+              "}
+            "}
+          "}
+        "}
+    " }
+
     " AutoCloseTag {
         " Make it so AutoCloseTag works for xml and xhtml files as well
         au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
